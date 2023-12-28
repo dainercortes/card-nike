@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+
+body {
+    background-color: #6D7343;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6D7343;
+}
+
+.container-card {
+    width: 80%;
+    height: 90%;
+    max-height: 600px;
+    display: flex;
+}
+
+.container-card .container-left, 
+.container-card .container-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.container-card .container-left {
+    background-color: #A0A672;
+    color: #BEBFA3;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.container-card .container-left .shoe-brand {
+    font-size: 10rem;
+    font-weight: 800;
+}
+
+.container-card .container-left .shoe-name {
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.container-card .container-left img {
+    width: 120%;
+    position: absolute;
+    z-index: 10;
+    left: -12%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transform: rotate(-20deg);
+    filter: drop-shadow(0 20px 10px rgba(0, 0, 0, 0.5));
+}
+
+
+.container-card .container-right {
+    background-color: #FFFFFF;
+    padding: 30px;
+    justify-content: space-around;
+    border-radius: 0px 10px 10px 0px;
+    color: rgb(72, 72, 72);
+}
+
+.container-card .container-right  h2 {
+    font-size: 2.6rem;
+    font-weight: bold;
+    color: #4e4e4e;
+}
+
+.container-card .container-right .container-title h3 {
+    font-size: 1.4rem;
+    color: gray;
+}
+
+.container-card .container-right p {
+    margin: 20px 0 20px 12%;
+    color: rgb(72, 72, 72);
+    line-height: 1.5rem;
+    text-align: justify;
+}
+
+.container-card .container-right ul {
+    margin-left: 16%;
+    line-height: 1.5rem;
+}
+
+.container-card .container-right .container-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.container-card .container-right .container-price p {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 0;
+}
+
+.container-card .container-right .container-price button {
+    background-color: #A0A672;
+    color: #FFFFFF;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    width: 125px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+/*RESPONSIVE*/
+@media (max-width: 1045px) {
+    .container-card .container-left .shoe-name {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 990px) {
+    .container {
+        height: auto;
+    }
+    
+    .container-card {
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .container-card .container-left, 
+    .container-card .container-right {
+        width: 100%;
+        display: flex;
+    }
+    
+    .container-card .container-left {
+        border-radius: 10px 10px 0px 0px;
+        align-items: flex-start;
+        margin-top: 40px;
+    }
+    
+    .container-card .container-left .shoe-name {
+        display: none;
+    }
+    
+    .container-card .container-left img {
+        width: 95%;
+        position: initial;
+        left: 0;
+        margin: -25% auto 5% auto;
+        transform: none;
+    }
+    
+    .container-card .container-right {
+        padding: 30px 30px 40px 30px;
+        margin-bottom: 40px;
+        border-radius: 0px 0px 10px 10px;
+    }
+    
+    .container-card .container-right p {
+        margin: 20px 0;
+    }
+    
+    .container-card .container-right ul {
+        margin-left: 18px;
+    }
+} 
+
+@media (max-width: 560px) {
+    .container-card {
+        width: 90%;
+    }
+
+    .container-card .container-right .container-price {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .container-card .container-right .container-price p {
+        margin-bottom: 30px;
+    }
+    
+    .container-card .container-right .container-price button {
+        width: 80%;
+        height: 50px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .container-card .container-left .shoe-brand {
+        font-size: 8rem;
+    }
+
+    .container-card .container-right  h2 {
+        font-size: 2rem;
+    }
+    
+    .container-card .container-right .container-title h3 {
+        font-size: 1.1rem;
+    }
+    
+    .container-card .container-right .container-price p {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .container-card .container-left .shoe-brand {
+        font-size: 7rem;
+    }
+    .container-card .container-right .container-price {
+        align-items: center;
+    }
+}
